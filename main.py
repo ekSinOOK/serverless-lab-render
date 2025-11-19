@@ -43,7 +43,7 @@ def init_db():
 # Для простоты вызовем init_db() вручную один раз после запуска (опционально),
 # но безопаснее — делать её внутри роутов или при первом подключении.
 
-@app.before_first_request
+@app.before_request
 def setup():
     try:
         init_db()
